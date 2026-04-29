@@ -11,3 +11,7 @@ codigo_sin_funcionar:
 El primer error que detecté es que no estaba incluida la libreria "stdio.h" y faltaban unos ";" lo que no permitía al programa ser compilado. Una vez resuelta la parte sintáctica, observo que el programa no funciona como se espera, y son por las siguientes razones:
 - el "&" en valor1.
 -en la función "duplicar_numero" estamos pasando a "valor1" por valor. Para solucionar esto, decidí que la mejor forma era pasar a "valor1" por referencia. Para el correcto funcionamiento tambien tuve que modificar la función "duplicar_numero"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+4-g)
+    El resultado es el mismo porque justamente el valor del puntero es la direccion de memoria de la variable apuntada. En el punto 4 no obtenemos lo mismo ya que no estamos viendo el valor del puntero sino su direccion de memoria.

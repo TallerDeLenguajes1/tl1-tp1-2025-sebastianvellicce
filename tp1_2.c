@@ -22,7 +22,7 @@ void Invertir( int *a, int *b){
 void orden(int *a, int *b){
     int aux;
 
-    if(*a<*b){
+    if(*a>*b){
     aux=*b;
     *b=*a;
     *a=aux;
@@ -44,13 +44,13 @@ int main(){
     mostrarDirrecYCont(n);
     printf("El valor de a = %d\nEl valor de b = %d",a,b);
     Invertir(&a,&b);
-    printf("\nInvertimos:\na = %d\nEl valor de b = %d ",a,b);
+    printf("\nInvertimos:\na = %d\nEl valor de b = %d\n",a,b);
 
     printf("Ingrese dos numeros enteros:\n");
     scanf("%d",&c);
     scanf("%d",&d);
 
     orden(&c, &d);
-
+    printf("Numeros ordenados: %d, %d\n",c,d);
     return 0;
 }
