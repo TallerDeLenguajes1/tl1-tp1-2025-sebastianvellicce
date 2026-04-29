@@ -1,45 +1,45 @@
 #include <stdio.h>
 
-void f_alpha(int *p) {
-    int temp = *p;
-    int rev = 0;
+void invertirDigitos(int *punteroNum) {
+    int temp = *punteroNum;
+    int numInvertido = 0;
     while (temp > 0) {
-        rev = (rev * 10) + (temp % 10);
+        numInvertido = (numInvertido * 10) + (temp % 10);
         temp = temp / 10;
     }
-    *p = rev;
+    *punteroNum = numInvertido;
 }
 
-void f_beta(int *p) {
-    *p = *p / 2;
+void mitadEntera(int *punteroNum) {
+    *punteroNum = *punteroNum / 2;
 }
 
-void f_gamma(int *p) {
-    int temp = *p;
-    int suma = 0;
+void sumarNumeroConDigitos(int *punteroNum) {
+    int temp = *punteroNum;
+    int sumaDigitos = 0;
     while (temp > 0) {
-        suma = suma + (temp % 10);
+        sumaDigitos = sumaDigitos + (temp % 10);
         temp = temp / 10;
     }
-    *p = *p + suma;
+    *punteroNum = *punteroNum + sumaDigitos;
 }
 
-void procesar_enigma(int *valor_referencia) {
-    f_alpha(valor_referencia);
-    f_beta(valor_referencia);
-    f_gamma(valor_referencia);
+void procesarNumero(int *punteroNum) {
+    invertirDigitos(punteroNum);
+    mitadEntera(punteroNum);
+    sumarNumeroConDigitos(punteroNum);
 }
 
 int main() {
-    int dato_secreto = 452;
+    int numero = 452;
     
-    printf("Iniciando depuracion con el valor: %d\n", dato_secreto);
+    printf("Iniciando depuracion con el valor: %d\n", numero);
     
     // Instrucción para el alumno: 
     // Pon un breakpoint aquí (F9) y usa F11 (Step Into) para entrar a cada función.
-    procesar_enigma(&dato_secreto);
+    procesarNumero(&numero); //Lo que hace procesar Numero es invertir el numero, separar sus digitos y sumar el numero invertido con sus digitos.
     
-    printf("Resultado final del enigma: %d\n", dato_secreto);
+    printf("Resultado final del enigma: %d\n", numero);
     
     return 0;
 }

@@ -1,0 +1,18 @@
+# Ignorar archivos compilados
+*.exe
+*.o
+*.out
+
+# Ignorar carpetas
+node_modules/
+build/
+
+# Ignorar archivos con datos sensibles
+.env
+
+# Ignorar archivos del sistema
+Thumbs.db
+.DS_Store
+
+# Ignorar configuración del IDE
+.vscode/
