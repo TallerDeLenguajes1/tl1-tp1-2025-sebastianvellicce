@@ -33,13 +33,13 @@ void procesarNumero(int *punteroNum) {
 int main() {
     int numero = 452;
     
-    printf("Iniciando depuracion con el valor: %d\n", numero);
+    printf("El numero incial es: %d\n", numero);
     
     // Instrucción para el alumno: 
     // Pon un breakpoint aquí (F9) y usa F11 (Step Into) para entrar a cada función.
     procesarNumero(&numero); //Lo que hace procesar Numero es invertir el numero, separar sus digitos y sumar el numero invertido con sus digitos.
     
-    printf("Resultado final del enigma: %d\n", numero);
+    printf("Resultado final: %d.\nLo que este programa hizo es invertir el numero, luego dividimos en 2 al numero y por ultimo sumamos los digitos del resultado de la division entera.\n", numero);
     
     return 0;
 }

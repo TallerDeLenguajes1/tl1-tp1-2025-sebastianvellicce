@@ -50,7 +50,7 @@ int main(){
     scanf("%d",&c);
     scanf("%d",&d);
 
-    void orden(&c, &d);
+    orden(&c, &d);
 
     return 0;
 }
